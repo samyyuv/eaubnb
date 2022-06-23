@@ -30,7 +30,8 @@ body {
   padding: 0 5rem;
 }
 
-.photo {
+.photo,
+.card-photo {
   max-height: 400px;
   max-width: 100%;
   border-radius: 9px;
@@ -40,7 +41,7 @@ body {
   flex-direction: column;
 }
 
-section.content {
+section.hero {
   padding: 3rem 6rem;
   max-width: 1800px;
   margin: 0 auto;
@@ -56,4 +57,50 @@ section.content {
   font-size: 16px;
   font-weight: 300;
   width: 50%;
+}
+
+.card-container {
+  padding-left: 6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card-image-container {
+  position: relative;
+}
+
+.availability {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 4px 6px;
+}
+
+.info {
+  display: flex;
+}
+
+.info>p {
+  margin: 0;
+  padding-left: 4px;
+}
+
+.info-container {
+  padding-top: 9px;
+}
+
+.star {
+  max-height: 20px;
+  max-width: 100%;
+}
+
+.gray {
+  color: #918E9B;
+}
+
+.strong {
+  font-weight: 600;
 }
