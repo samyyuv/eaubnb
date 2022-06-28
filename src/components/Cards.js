@@ -1,25 +1,32 @@
 import React from 'react';
-import card1 from '../images/cards/card1.jpg';
 
-export default function Cards() {
+export default function Cards(props) {
+  let badgeText
+  if (props.item.openSpots === 0) {
+    badgeText = "SOLD OUT"
+  } else if (props.item.location === "Online") {
+    badgeText = "ONLINE"
+  }
+
+
   return (
-    <section className='card-container content'>
-      <div className='card'>
-        <div className='card-image-container'>
-          <img className='card-photo' src={card1} />
-          <span className='availability'>SOLD OUT</span>
-        </div>
+    <div className='card'>
+      <div className='card-image-container'>
+        <img className='card-photo' src={`/images/cards/${props.item.img}`} />
+        {badgeText && <span className='availability'>{badgeText}</span>}
 
-        <div className='info-container'>
-          <div className='info'>
-            <img className='star' src={require('../images/cards/star.png')} />
-            <p>5.0</p>
-            <p className='gray'>(6) | USA</p>
-          </div>
-          <p>Life lessons with Katie Zaferes</p>
-          <p><span className='strong'>From $136</span> / person</p>
-        </div>
       </div>
-    </section >
+
+      <div className='info-container'>
+        <div className='info'>
+          <img className='star' src={"/images/cards/star.png"} />
+          <p>{props.item.stats.rating}</p>
+          <p className='gray'>({props.item.stats.reviewCount}) | {props.item.country}</p>
+        </div>
+        <p>{props.item.title}</p>
+        <p><span className='strong'>From ${props.item.price}</span> / person</p>
+      </div>
+    </div >
   );
 }
+
