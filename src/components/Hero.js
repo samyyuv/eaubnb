@@ -2,26 +2,26 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className='content hero'>
+    <section className='hero'>
       <div className='photosIntro'>
         <div className='column'>
-          <img className='photo' src={require('../images/hero/yoga.jpg')} />
+          <img className='photo' src={'/images/hero/yoga.jpg'} />
         </div>
         <div className='column'>
-          <img className='photo' src={require('../images/hero/kids.jpg')} />
-          <img className='photo' src={require('../images/hero/beach-surf.jpg')} />
+          <img className='photo' src={'/images/hero/kids.jpg'} />
+          <img className='photo' src={'/images/hero/beach-surf.jpg'} />
         </div>
         <div className='column '>
-          <img className='photo' src={require('../images/hero/flip.jpg')} />
-          <img className='photo' src={require('../images/hero/cenote.jpg')} />
+          <img className='photo' src={'/images/hero/flip.jpg'} />
+          <img className='photo' src={'/images/hero/cenote.jpg'} />
         </div>
         <div className='column'>
-          <img className='photo' src={require('../images/hero/kayak.jpg')} />
-          <img className='photo' src={require('../images/hero/swim.jpg')} />
+          <img className='photo' src={'/images/hero/kayak.jpg'} />
+          <img className='photo' src={'/images/hero/swim.jpg'} />
         </div>
         <div className='column column-up'>
-          <img className='photo' src={require('../images/hero/fishing.jpg')} />
-          <img className='photo' src={require('../images/hero/canoe.jpg')} />
+          <img className='photo' src={'/images/hero/fishing.jpg'} />
+          <img className='photo' src={'/images/hero/canoe.jpg'} />
         </div>
       </div>
       <div className="homeText">
